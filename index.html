@@ -150,10 +150,12 @@
         <script src="js/scripts.js"></script>
     </body>
 
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
     <script type="module">
       // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
     
@@ -162,6 +164,7 @@
       const firebaseConfig = {
         apiKey: "AIzaSyCae1z-n4g2zlBg3cWEMYwBMrYjbGiSs7E",
         authDomain: "studypj-1865b.firebaseapp.com",
+        databaseURL: "https://studypj-1865b-default-rtdb.asia-southeast1.firebasedatabase.app",
         projectId: "studypj-1865b",
         storageBucket: "studypj-1865b.appspot.com",
         messagingSenderId: "300874514693",
