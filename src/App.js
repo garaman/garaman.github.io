@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
-import Gugudan from './components/Gugudan';
+import Gugudan from './components/Gugudan/Gugudan';
 
 // Home 컴포넌트: App-logo만 중앙정렬로 표시
 function Home() {
