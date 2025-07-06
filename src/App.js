@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
-import Gugudan from './components/Gugudan/Gugudan';
+import Gugudan from './components/gugudan/Gugudan';
 
 // Home 컴포넌트: App-logo만 중앙정렬로 표시
 function Home() {
@@ -29,7 +29,17 @@ function App() {
         <Routes>
           <Route path="*" element={<Home />} /> {/* 404일 때 홈으로 이동 */}
           <Route path="/" element={<Home />} />
-          <Route path="/gugudan" element={<Gugudan />} />          
+          <Route path="/gugudan" element={
+            <>
+            <h1>구구단 게임</h1>
+              <div className="gugudan-content">              
+                <Gugudan />
+                <Gugudan />
+                <Gugudan />
+              </div>
+            </>
+            }
+          />          
         </Routes>
       </main>
     </div>

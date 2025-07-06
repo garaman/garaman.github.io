@@ -19,7 +19,7 @@ function Gugudan() {
         inputRef.current && inputRef.current.focus();
       });
     } else {
-      setResult('땡');
+      setResult('틀렸습니다. 다시 시도하세요.');
       setValue('');
       setTimeout(() => {
         inputRef.current && inputRef.current.focus();
