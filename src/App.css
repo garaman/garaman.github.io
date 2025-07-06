@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -66,7 +72,7 @@
 
 .app-menu .App-link {
   display: block;
-  width: 80%;
+  width: 100%;
   padding: 5% 10%;
   color: #e3e8f7; /* 밝은 회색 */
   text-decoration: none;
