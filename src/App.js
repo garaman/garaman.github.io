@@ -3,8 +3,7 @@ import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import Gugudan from './components/Gugudan';
 
-
-function App() {
+function Home() {
   return (
     <div className="App">
       <header className="App-header">
@@ -25,10 +24,16 @@ function App() {
           구구단 페이지로 이동
         </Link>
       </header>
-      <Routes>
-        <Route path="/gugudan" element={<Gugudan />} />
-      </Routes>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/gugudan" element={<Gugudan />} />
+    </Routes>
   );
 }
 
