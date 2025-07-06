@@ -27,8 +27,9 @@ function App() {
       </nav>
       <main className="app-content">
         <Routes>
+          <Route path="*" element={<Home />} /> {/* 404일 때 홈으로 이동 */}
           <Route path="/" element={<Home />} />
-          <Route path="/gugudan" element={<Gugudan />} />
+          <Route path="/gugudan" element={<Gugudan />} />          
         </Routes>
       </main>
     </div>
