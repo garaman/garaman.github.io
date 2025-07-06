@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import { Link, Routes, Route } from 'react-router-dom';
+import Gugudan from './components/Gugudan';
 
 
 function App() {
@@ -19,8 +21,13 @@ function App() {
           Learn React123
         </a>
         <br />
-
+        <Link to="/gugudan" className="App-link">
+          구구단 페이지로 이동
+        </Link>
       </header>
+      <Routes>
+        <Route path="/gugudan" element={<Gugudan />} />
+      </Routes>
     </div>
   );
 }
