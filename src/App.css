@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #333;
 }
 
 .App-link {
@@ -49,7 +49,7 @@
 }
 
 .app-menu {
-  width: 30%;
+  width: 15%;
   min-width: 180px;
   background: #32374a; /* 더 자연스러운 어두운 네이비톤 */
   border-right: 1px solid #23263a;
@@ -74,47 +74,129 @@
   display: block;
   width: 100%;
   padding: 5% 10%;
-  color: #e3e8f7; /* 밝은 회색 */
+  color: #c5c5c5; /* 밝은 회색 */
   text-decoration: none;
   font-size: 1.1rem;
   border-bottom: 1px solid #23263a;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* 모든 전환에 ease 효과 추가 */
+  transform: scale(1); /* 기본 크기 */
+  position: relative; /* z-index를 위해 필요 */
+  z-index: 1; /* hover 시 다른 요소 위에 오도록 */
 }
 
-.app-menu .App-link:hover,
+.app-menu .App-link:hover {
+  background: #4f83ff; /* 눈에 잘 띄는 밝은 파랑 */
+  color: #333;
+  transform: scale(1.03); /* hover 시 약간 확대 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
 .app-menu .App-link.active {
   background: #4f83ff; /* 눈에 잘 띄는 밝은 파랑 */
-  color: #fff;
+  color: #333;
+  transform: scale(1.03); /* active 시에도 확대 유지 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* active 시에도 그림자 유지 */
+  /* 클릭 시 애니메이션을 위한 추가 스타일 */
+  animation: click-feedback 0.3s ease-out; /* 클릭 피드백 애니메이션 */
+}
+
+@keyframes click-feedback {
+  0% {
+    transform: scale(1.03);
+    background-color: #4f83ff; /* 시작 색상 */
+  }
+  50% {
+    transform: scale(0.98); /* 살짝 눌리는 효과 */
+    background-color: #3a6edc; /* 클릭 시 색상 */
+  }
+  100% {
+    transform: scale(1.03);
+    background-color: #4f83ff; /* 원래 색상으로 복귀 */
+  }
 }
 
 .app-content {
-  width: 70%;
+  width: 85%;
   padding: 40px 32px;
   overflow-y: auto;
-  display: flex;  
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #22263a; /* 더 어두운 배경 */
-  color: #e3e8f7; /* 밝은 글자색 */
+}
+
+.app-content h1 {
+  color: #eee;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .home-content {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  text-align: center;
 }
 
-.gugudan-content
-{
+.home-title {
+  font-size: 3rem;
+  color: #eee;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.home-description {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 0.5s;
+}
+
+.home-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #4f83ff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s forwards 1s;
+}
+
+.home-button:hover {
+  background-color: #3a6edc;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gugudan-content {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   overflow-y: auto;
   scrollbar-width: none;
 }

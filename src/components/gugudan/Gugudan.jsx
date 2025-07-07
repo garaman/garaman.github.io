@@ -11,7 +11,7 @@ function Gugudan() {
   const onSubmit = (e) => {
     e.preventDefault();
     if (parseInt(value) === first * second) {
-      setResult(first +'x'+second+' = ' + value);
+      setResult(first + 'x' + second + ' = ' + value);
       setFirst(Math.ceil(Math.random() * 9));
       setSecond(Math.ceil(Math.random() * 9));
       setValue('');
@@ -56,4 +56,3 @@ function Gugudan() {
 }
 
 export default Gugudan;
-

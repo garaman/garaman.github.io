@@ -1,0 +1,75 @@
+.mine-search-container {
+  width: auto;
+  margin: 40px auto;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fafbfc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mine-search-timer,
+.mine-search-result {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mine-search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.mine-search-form .input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mine-search-form label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.mine-search-form input[type='number'] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 80px;
+  text-align: center;
+}
+
+.mine-search-form button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px; /* Adjust as needed to align with inputs */
+}
+
+.mine-search-container table {
+  width: 60%; /* 테이블 너비를 60%로 줄임 */
+  margin: 0 auto; /* 가운데 정렬 */
+}
+
+.mine-search-container table td {
+  width: 20px; /* 셀 너비 */
+  height: 20px; /* 셀 높이 */
+  line-height: 20px; /* 텍스트 세로 중앙 정렬 */
+  font-size: 12px; /* 폰트 크기 줄임 */
+  text-align: center;
+  border: 1px solid #bbb;
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-.gugudan-container {
+.wordRelay-container {
   width: 350px;
   height: 200px;
   margin: 40px auto;
@@ -10,20 +10,20 @@
   text-align: center;
   font-family: sans-serif;
 }
-.gugudan-question {
+.wordRelay-question {
   color: #333;
   font-size: 1.3rem;
   margin-bottom: 18px;
   font-weight: bold;
 }
-.gugudan-input {
+.wordRelay-input {
   padding: 8px;
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #bbb;
   margin-right: 8px;
 }
-.gugudan-button {
+.wordRelay-button {
   padding: 8px 16px;
   font-size: 1rem;
   border-radius: 4px;
@@ -32,7 +32,7 @@
   color: #333;
   cursor: pointer;
 }
-.gugudan-result {
+.wordRelay-result {
   min-height: 32px;
   margin-top: 20px;
   font-size: 1.1rem;
@@ -44,13 +44,13 @@
   justify-content: center;
   color: #333;
 }
-.gugudan-result:empty::after {
+.wordRelay-result:empty::after {
   content: '결과가 여기에 표시됩니다.';
   color: #333;
 }
-.gugudan-result {
+.wordRelay-result {
   color: #333;
 }
-.gugudan-result:has(:not(:empty)) {
+.wordRelay-result:has(:not(:empty)) {
   color: inherit;
 }
