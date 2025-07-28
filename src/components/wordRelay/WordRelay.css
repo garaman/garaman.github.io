@@ -54,3 +54,18 @@
 .wordRelay-result:has(:not(:empty)) {
   color: inherit;
 }
+
+@media (max-width: 480px) {
+  .wordRelay-container {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .wordRelay-input {
+    width: 60%;
+  }
+
+  .wordRelay-button {
+    width: 35%;
+  }
+}

@@ -200,3 +200,91 @@
   overflow-y: auto;
   scrollbar-width: none;
 }
+
+.hamburger-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger-button {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .app-layout.menu-open .hamburger-button span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .app-layout.menu-open .hamburger-button span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .app-layout.menu-open .hamburger-button span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  .app-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: #32374a;
+    transition: left 0.3s ease-in-out;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+  }
+
+  .app-layout.menu-open .app-menu {
+    left: 0;
+  }
+
+  .app-menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .app-menu li {
+    width: 100%;
+  }
+
+  .app-menu .App-link {
+    padding: 15px 20px;
+    border-bottom: 1px solid #23263a;
+  }
+
+  .app-content {
+    width: 100%;
+    padding: 20px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+
+  .gugudan-content {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
 //import logo from './logo.svg';
 import './App.css';
@@ -46,18 +46,29 @@ function Loading() {
 }
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className="app-layout">
+    <div className={`app-layout ${isMenuOpen ? 'menu-open' : ''}`}>
+      <button className="hamburger-button" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav className="app-menu">
         <ul>
           <li>
-            <Link to="/" className="App-link">
+            <Link to="/" className="App-link" onClick={toggleMenu}>
               Home
             </Link>
           </li>
           {gameRoutes.map((route) => (
             <li key={route.path}>
-              <Link to={route.path} className="App-link">
+              <Link to={route.path} className="App-link" onClick={toggleMenu}>
                 {route.title}
               </Link>
             </li>

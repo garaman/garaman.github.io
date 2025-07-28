@@ -54,3 +54,22 @@
 .gugudan-result:has(:not(:empty)) {
   color: inherit;
 }
+
+@media (max-width: 480px) {
+  .gugudan-container {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .gugudan-question {
+    font-size: 1.1rem;
+  }
+
+  .gugudan-input {
+    width: 60%;
+  }
+
+  .gugudan-button {
+    width: 35%;
+  }
+}

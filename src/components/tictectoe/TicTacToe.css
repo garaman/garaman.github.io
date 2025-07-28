@@ -30,3 +30,11 @@ td {
   text-align: center;
   vertical-align: middle;
 }
+
+@media (max-width: 480px) {
+  td {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}

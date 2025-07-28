@@ -62,3 +62,18 @@
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 640px) {
+  .lotto-container {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .ball {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px;
+    margin: 5px;
+  }
+}
